@@ -1,13 +1,27 @@
 {
+  "sample_interval_seconds": 60,
   "persistence_minutes": 5,
+  "merge_gap_minutes": 5,
   "inverter_residual_c": 12,
   "pcs_residual_c": 12,
   "container_residual_c": 8,
   "soc_spread_pct": 8,
+  "igbt_k_c_per_kw": 0.03,
+  "pcs_k_c_per_kw": 0.06,
+  "container_offset_c": 2,
   "pv_nameplate_kw": 1000,
   "inverter_ac_rating_kw": 850,
   "pv_temperature_coefficient": -0.004,
   "inverter_efficiency": 0.97,
   "minimum_irradiance_wm2": 150,
-  "underperformance_ratio": 0.75
+  "underperformance_ratio": 0.75,
+  "flatline_samples": 60,
+  "quality_limits": {
+    "max_invalid_key_fraction": 0.001,
+    "max_duplicate_fraction": 0.01,
+    "max_invalid_row_fraction": 0.01,
+    "max_irregular_interval_fraction": 0.01,
+    "min_asset_completeness": 0.95,
+    "max_flatline_fraction": 0.01
+  }
 }

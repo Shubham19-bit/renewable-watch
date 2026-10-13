@@ -10,4 +10,8 @@ jobs:
           python-version: "3.11"
       - run: python -m pip install -r requirements.txt
       - run: python -m unittest -v
-      - run: python pipeline.py --days 2 --out ci_out
+      # End-to-end: synthetic run must pass the data-quality gate (exit 2 otherwise).
+      - run: python pipeline.py --days 2 --out ci_out --strict
+      # End-to-end: vendor-schema export -> adapter -> pipeline.
+      - run: python vendor_demo.py --out ci_vendor.csv
+      - run: python pipeline.py --input ci_vendor.csv --mapping examples/vendor_mapping.json --out ci_vendor_out --strict

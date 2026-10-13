@@ -1,0 +1,14 @@
+{
+  "timestamp": {"source": "Time_IST", "timezone": "Asia/Kolkata"},
+  "asset_id": {"source": ["Site", "Block"], "join": "-"},
+  "ambient_c": {"source": "AmbTemp_F", "unit": "F"},
+  "irradiance_wm2": {"source": "POA_kWm2", "unit": "kW/m2"},
+  "module_c": {"source": "ModTemp_F", "unit": "F"},
+  "pv_kw": {"source": "PV_Power_W", "unit": "W"},
+  "igbt_c": {"source": "IGBT_Temp_F", "unit": "F"},
+  "pcs_kw": {"source": "PCS_Power_MW", "unit": "MW"},
+  "pcs_c": {"source": "PCS_Temp_K", "unit": "K"},
+  "container_c": {"source": "Container_Temp_F", "unit": "F"},
+  "soc_min_pct": {"source": "SOC_Min_frac", "unit": "fraction"},
+  "soc_max_pct": {"source": "SOC_Max_frac", "unit": "fraction"}
+}
